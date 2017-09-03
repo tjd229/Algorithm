@@ -52,4 +52,4 @@
       
         
         
-email : tjd4987@naver.com
+e-mail : tjd4987@naver.com
