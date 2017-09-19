@@ -15,6 +15,7 @@
 * ccw : counter clock wise algorithm  
 * convex hull  
 * dijkstra  
+* dinic : dinic's algorithm
 * djs : disjoint set  
 * dp : dynamic programming  
 * d&c : divide and conquer  
@@ -35,6 +36,7 @@
 * mdp : monotone dynamic programming  
 * merge st : merge segment tree  
 * MST : Minimum Spanning Tree  
+* NF : Network Flow  
 * pbs : parallel binary search  
 * plain sweeping   
 * pst : persistent segment tree  
