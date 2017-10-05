@@ -1,4 +1,4 @@
-//category : merge st, plain sweeping 
+//category : merge st, line sweeping 
 
 #include <stdio.h>
 #include <memory.h>
