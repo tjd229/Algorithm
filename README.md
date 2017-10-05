@@ -26,7 +26,7 @@
 * graph : graph, tree  
 * greedy  
 * hashing : Rabin Karp algorithm  
-* immplementation  
+* implementation  
 * KMP : Knuth–Morris-Pratt algorithm  
 * knapsack  
 * lazy propagation  
