@@ -31,14 +31,13 @@
 * knapsack  
 * lazy propagation  
 * LCA : Lowest Common Acnestor  
-* line sweeping : line sweeping, two pointers  
+* line sweeping : line sweeping, two pointers, plain sweeping  
 * math  
 * mdp : monotone dynamic programming  
 * merge st : merge segment tree  
 * MST : Minimum Spanning Tree  
 * NF : Network Flow  
 * pbs : parallel binary search  
-* plain sweeping   
 * pst : persistent segment tree  
 * SCC : Strongly Connected Component  
 * SPFA : Shortest Path Faster Algorithm  
