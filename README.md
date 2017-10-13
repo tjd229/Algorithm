@@ -4,12 +4,14 @@
 >BOJ : https://www.acmicpc.net/  
 >codeforce : [codeforce.com](codeforce.com)  
 >UVa : https://uva.onlinejudge.org/   
-  
+>SPOJ : http://www.spoj.com/  
+
     
 # Category description  
   
 * 2-SAT : 2-Satisfiability  
 * AC : Aho-Corasick algorithm  
+* BCC : Biconnected Component
 * Bellman Ford : Bellman Ford algorithm  
 * bs : binary search  
 * ccw : counter clock wise algorithm  
