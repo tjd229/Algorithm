@@ -34,6 +34,7 @@
 * knapsack  
 * lazy propagation  
 * LCA : Lowest Common Acnestor  
+* LCP : Longest Common Prefix  
 * line sweeping : line sweeping, two pointers, plain sweeping  
 * math  
 * mdp : monotone dynamic programming  
@@ -42,6 +43,7 @@
 * NF : Network Flow  
 * pbs : parallel binary search  
 * pst : persistent segment tree  
+* SA : Suffix Array  
 * SCC : Strongly Connected Component  
 * SPFA : Shortest Path Faster Algorithm  
 * sqrt Decomp. : square root Decomposition  
