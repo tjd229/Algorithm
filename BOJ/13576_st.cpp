@@ -1,4 +1,4 @@
-//category : string, lcp, st, bs
+//category : string, SA, st, bs
 
 #include <iostream>
 #include <vector>
