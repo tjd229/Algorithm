@@ -16,6 +16,7 @@
 * Bellman Ford : Bellman Ford algorithm  
 * bs : binary search  
 * ccw : counter clock wise algorithm  
+* cnt sort : counting sort
 * convex hull  
 * dijkstra  
 * dinic : dinic's algorithm
@@ -34,7 +35,6 @@
 * knapsack  
 * lazy propagation  
 * LCA : Lowest Common Acnestor  
-* LCP : Longest Common Prefix, Suffix Array  
 * line sweeping : line sweeping, two pointers, plain sweeping  
 * math  
 * mdp : monotone dynamic programming  
@@ -43,6 +43,7 @@
 * NF : Network Flow  
 * pbs : parallel binary search  
 * pst : persistent segment tree  
+* SA : Suffix Array, Longest Common Prefix
 * SCC : Strongly Connected Component  
 * SPFA : Shortest Path Faster Algorithm  
 * sqrt Decomp. : square root Decomposition  
