@@ -1,4 +1,4 @@
-//category : string, lcp
+//category : string, SA
 
 #include <iostream>
 #include <vector>
