@@ -39,6 +39,7 @@
 * math  
 * mdp : monotone dynamic programming  
 * merge st : merge segment tree  
+* MITM : Meet in the middle  
 * MST : Minimum Spanning Tree  
 * NF : Network Flow  
 * pbs : parallel binary search  
