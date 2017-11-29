@@ -6,6 +6,8 @@
 >UVa : https://uva.onlinejudge.org/   
 >SPOJ : http://www.spoj.com/  
 >CSA : https://csacademy.com/  
+>algospot : https://algospot.com/  
+>HackerRank : [HackerRank](https://www.hackerrank.com/dashboard)  
 
     
 # Category description  
