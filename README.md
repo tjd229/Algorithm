@@ -32,13 +32,14 @@
 * graph : graph, tree  
 * greedy  
 * hashing : Rabin Karp algorithm  
-* implementation  
+* implementation : Brute force  
 * KMP : Knuth–Morris-Pratt algorithm  
 * knapsack  
 * lazy propagation  
 * LCA : Lowest Common Acnestor  
 * line sweeping : line sweeping, two pointers, plain sweeping  
 * math  
+* MCMF : Minimum Cost Maximum Flow
 * mdp : monotone dynamic programming  
 * merge st : merge segment tree  
 * MITM : Meet in the middle  
