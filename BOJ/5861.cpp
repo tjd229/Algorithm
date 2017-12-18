@@ -22,7 +22,7 @@ void make_trie(int ix,int curr,int num,string &s){
 	if (node[ix].nxt[s[curr] - 'a'] == 0) node[ix].nxt[s[curr] - 'a'] = ++cnt;
 	make_trie(node[ix].nxt[s[curr] - 'a'],curr+1,num,s);
 }
-bool check(vector<int> &v){
+bool check(vector<int> &v){//tp sort
 	int ind[26] = { 0 };
 	int i,j;
 	int curr;
