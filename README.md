@@ -2,7 +2,7 @@
 
 
 >BOJ : https://www.acmicpc.net/  
->codeforce : [codeforce.com](codeforce.com)  
+>codeforce : [codeforce.com](http://codeforces.com)  
 >UVa : https://uva.onlinejudge.org/   
 >SPOJ : http://www.spoj.com/  
 >CSA : https://csacademy.com/  
