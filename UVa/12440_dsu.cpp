@@ -73,8 +73,8 @@ int main(){
 	int T;
 	int tc = 1;
 	int N;
-	freopen("i.txt", "r", stdin);
-	freopen("o.txt", "w", stdout);
+	//freopen("i.txt", "r", stdin);
+	//freopen("o.txt", "w", stdout);
 	for (scanf("%d", &T); tc <= T; tc++){
 		memset(mh, 0, sizeof(mh));
 		memset(md, 0, sizeof(md));
