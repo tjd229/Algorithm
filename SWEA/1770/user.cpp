@@ -1,4 +1,4 @@
-//category : hashing
+//category : hashing, bs
 #define MAX 30000
 #define ll long long
 const int base = 8;
