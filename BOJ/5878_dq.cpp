@@ -1,5 +1,5 @@
 //category : dp
-
+//reference : http://www.usaco.org/current/data/sol_bookshelf_gold.html
 #include <stdio.h>
 #include <set>
 #define ll long long
