@@ -1,4 +1,4 @@
-//category : implementation
+//category : line sweeping
 
 #include <stdio.h>
 #include <algorithm>
@@ -31,6 +31,5 @@ int main(){
 		}
 		printf("%lld\n",ans);
 	}
-
 	return 0;
 }
