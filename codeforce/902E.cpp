@@ -1,4 +1,4 @@
-//category : graph, st, lazy propagation
+//category : graph, SCC, st, lazy propagation
 
 #include <stdio.h>
 #include <algorithm>
@@ -66,7 +66,6 @@ void dfs(int ix){
 		}
 	}
 }
-
 int main(){
 	int i, j;
 	int n, m;
