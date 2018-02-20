@@ -20,7 +20,6 @@ void set_cd(){
 	}
 	for (i = 2; i < bndd; i++){
 		for (j = 1; j < i; j++){
-			//printf("%d,%d\n",i,j);
 			addd(cd[i][j], cd[i - 1][j - 1], cd[i - 1][j]);
 		}
 	}
