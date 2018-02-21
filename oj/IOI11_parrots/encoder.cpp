@@ -1,5 +1,5 @@
 //category : math
-
+//idea reference : http://blog.myungwoo.kr/26
 #include "encoder.h"
 #include "encoderlib.h"
 #include <memory.h>
