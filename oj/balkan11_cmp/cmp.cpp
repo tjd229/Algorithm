@@ -1,4 +1,4 @@
-//category : math
+//category : math, bs
 #include "cmp.h"
 void remember(int n) {
 	//edit this
