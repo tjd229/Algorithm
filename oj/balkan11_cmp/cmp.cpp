@@ -1,5 +1,4 @@
 //category : math
-
 #include "cmp.h"
 void remember(int n) {
 	//edit this
