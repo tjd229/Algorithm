@@ -1,5 +1,4 @@
 //category : graph, cnt sort, math
-
 #include "grader.h"
 #include "encoder.h"
 int p[1000];
