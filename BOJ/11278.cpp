@@ -51,7 +51,10 @@ int main(){
 
 	for (i = edges[0].size() - 1; i >= 0; i--){
 		dfs(edges[0][i], false, back);
-		if (!check(back[0])) return printf("0");
+		if (!check(back[0])){
+          printf("0");
+          return 0;  
+        } 
 		back[0].clear();
 	}
 	printf("1\n");
