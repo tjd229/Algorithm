@@ -10,9 +10,9 @@
 #define MAXL 56
 const int mod = 428957;
 static int lnum = -1;
-int cnt1[MAXL][mod], cnt2[MAXL][mod], cnt3[MAXL][mod];
+int cnt1[MAXL][mod], cnt2[MAXL][mod];// , cnt3[MAXL][mod];
 int cnt4[MAXL][mod];
-int ccnt1[mod], ccnt2[mod], ccnt3[mod], ccnt4[mod];
+int ccnt1[mod], ccnt2[mod], ccnt4[mod];
 ll hash_func(int n, ...){
 	va_list li;
 	va_start(li, n);
@@ -24,7 +24,7 @@ ll hash_func(int n, ...){
 	}
 	va_end(li);
 	return res;
-
+ 
 }
 void excerpt(int *E) {
 	int i, j;
@@ -38,16 +38,12 @@ void excerpt(int *E) {
 			if (ccnt2[h]<lnum/4)
 				val += cnt2[i][h] * 30;
 		}
-		for (j = 2; j < SZ; j++){
-			ll h = hash_func(3,  E[j - 2], E[j - 1], E[j]);
-			if (ccnt3[h]<lnum / 4)
-				val += cnt3[i][h] * 90;
+		//for (j = 2; j < SZ; j++) val += cnt3[i][hash_func(3, E[j - 2], E[j - 1], E[j])] * 30;
+		for (j = 3; j < SZ; j++){
+			ll h = hash_func(4, E[j - 3], E[j - 2], E[j - 1], E[j]);
+			if (ccnt4[h]<lnum/4)
+				val += cnt4[i][h] * 90;
 		}
-		//for (j = 3; j < SZ; j++){
-		//	ll h = hash_func(4, E[j - 3], E[j - 2], E[j - 1], E[j]);
-		//	if (ccnt4[h]<lnum/4)
-		//		val += cnt4[i][h] * 90;
-		//}
 		if (mx < val){
 			mx = val;
 			l = i;
@@ -66,14 +62,9 @@ void excerpt(int *E) {
 		cnt2[ans][h] = 1;
 	}
 	//for (i = 2; i < SZ; i++) cnt3[ans][hash_func(3, E[i - 2], E[i - 1], E[i])] = 1;
-	for (i = 2; i < SZ; i++){
-		ll h = hash_func(3,  E[i - 2], E[i - 1], E[i]);
-		if (cnt3[ans][h] == 0) ccnt3[h]++;
-		cnt3[ans][h] = 1;
-	}
-	/*for (i = 3; i < SZ; i++){
+	for (i = 3; i < SZ; i++){
 		ll h = hash_func(4, E[i - 3], E[i - 2], E[i - 1], E[i]);
 		if (cnt4[ans][h] == 0) ccnt4[h]++;
 		cnt4[ans][h] = 1;
-	}*/
+	}
 }
