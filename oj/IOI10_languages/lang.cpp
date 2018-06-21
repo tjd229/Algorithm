@@ -1,4 +1,4 @@
-//category : string, hashing
+//category : hashing
 
 #include <stdlib.h>
 #include <stdio.h>
