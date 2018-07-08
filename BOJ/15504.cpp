@@ -1,4 +1,4 @@
-//category : graph, MCMF, spfa
+//category : graph, MCMF, SPFA
 
 #include <stdio.h>
 #include <vector>
