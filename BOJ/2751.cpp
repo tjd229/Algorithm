@@ -1,4 +1,4 @@
-//implementation
+//d&c, implementation
 
 #include <stdio.h>
 int a[1000000];
