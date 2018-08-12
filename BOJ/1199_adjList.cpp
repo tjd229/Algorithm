@@ -48,7 +48,10 @@ int main(){
 		}
 	}
 	for (i = 1; i <= N; i++){
-		if (degree[i] & 1) return printf("-1");
+		if (degree[i] & 1){
+            printf("-1");  
+            return 0;
+        } 
 		else degree[i] = 1;
 		
 	}
@@ -74,7 +77,10 @@ int main(){
 		
 	}
 
-	if (globalCnt != 0) return printf("-1");
+	if (globalCnt != 0){
+            printf("-1");  
+            return 0;
+        } 
 	curr = root;
 	while (curr != NULL){
 		printf("%d ",curr->ix);
