@@ -1,49 +1,49 @@
 //category : dp
 
 #include <stdio.h>
-
-
+#include <memory.h>
+#include <queue>
+#define pii pair<int,int>
+using namespace std;
 int w[16][16];
-int d[1024*64][16];
+int d[1 << 16][16];
+int inq[1 << 16][16];
+int min(int a, int b){
+	
+	if (a < 0) return b;
+	if (b < 0) return a;
+	return a < b ? a : b;
+}
 int main(){
-
-	int n;
-	scanf("%d",&n);
-	int i, j,k;
-	int s;
-	int t;
-	int min;
-
-	for (i = 0; i < n; i++){
-		for (j = 0; j < n; j++) scanf("%d",&w[i][j]);
-	}
-	s = 1 << n;
-	for (i = 0; i < s; i++){
-		for (j = 0; j < n; j++){
-			d[i][j] = 1000000 * n;
-		}
+	int N;
+	int i, j;
+	memset(d, -1, sizeof(d));
+	for (scanf("%d", &N), i = 0; i < N; i++){
+		for (j = 0; j < N; j++) scanf("%d",&w[i][j]);
 	}
 	d[1][0] = 0;
-	for (i = 0; i < s; i++){
-		for (j = 1; j < n; j++){
-			if (i&(1 << j)){
-				for (k = 0; k < n; k++){
-					if (k!=j&&(i&(1 << k))&&w[k][j]){
-						t = d[i&~(1 << j)][k] + w[k][j];
-						if (t < d[i][j]) d[i][j] = t;
-					}
-				}
+	queue<pii > q;
+	q.push({ 1, 0 });
+	inq[1][0] = true;
+	while (q.size()){
+		int city = q.front().second;
+		int stat = q.front().first;
+		q.pop();
+		for (i = 0; i < N; i++){
+			if (w[city][i] && (stat&(1 << i)) == 0){
+				int nxt = stat | (1 << i);
+				d[nxt][i] = min(d[nxt][i], d[stat][city] + w[city][i]);
+				if (!inq[nxt][i]) q.push({nxt,i});
+				inq[nxt][i] = true;
 			}
 		}
 	}
-	min = 10000000 * n;
-	for (i = 1; i < n; i++){
-		t = d[(1 << n) - 1][i] + w[i][0];
-		if (t < min) min = t;
+	int ans = -1;
+	int stat = (1 << N) - 1;
+	for (i = 1; i < N; i++){
+		if (w[i][0] && d[stat][i]>=0)
+			ans = min(ans, d[stat][i] + w[i][0]);
 	}
-	printf("%d",min);
-
-
+	printf("%d",ans);
 	return 0;
 }
-
