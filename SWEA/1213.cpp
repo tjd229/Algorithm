@@ -1,5 +1,4 @@
-//hashing
-
+//string, hashing
 #include <string>
 #include <iostream>
 #define ll long long
