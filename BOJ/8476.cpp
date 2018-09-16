@@ -1,4 +1,4 @@
-//graph, lca, pst
+//graph, LCA, pst
 
 #include <stdio.h>
 #include <vector>
