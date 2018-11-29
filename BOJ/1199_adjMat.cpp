@@ -3,54 +3,44 @@
 #include <stdio.h>
 #include <vector>
 using namespace std;
-int graph[1001][1001];
-int degree[1001];
-int N,M;
+int mat[1001][1001];
+int loop[1001];
 vector<int> ans;
-int dfs(int n){
-	int i;
-	int m=0;
-	for(i=1;i<=N;i++){
-		if(graph[n][i]>0){
-			graph[n][i]--;
-			graph[i][n]--;
-			m+=dfs(i)+1;
+int N;
+void dfs(int ix) {
+	int &i = loop[ix];
+	for (; i <= N;) {
+		if (mat[ix][i] == 0) {
+			++i;
+			continue;
 		}
+		--mat[ix][i]; --mat[i][ix];
+		dfs(i);
+		//return;
 	}
-	ans.push_back(n);
-	return m;
+	ans.push_back(ix);
 }
-int main(){
+int main() {
+	int i, j;
+	int tot = 0;
+	bool flag = false;
+	for (scanf("%d", &N), i = 1; i <= N; ++i) {
+		int cnt = 0;
+		for (j = 1; j <= N; ++j) {
+			scanf("%d", mat[i] + j);
+			cnt += mat[i][j];
+		}
+		flag |= (cnt & 1);
+		tot += cnt;
+	}
+	tot >>= 1;
+	dfs(1);
 
-	int i,j;
-	scanf("%d",&N);
-	for(i=1;i<=N;i++){
-		for(j=1;j<=N;j++){
-			scanf("%d",&graph[i][j]);
-			if(graph[i][j]>0){
-				degree[i]+=graph[i][j];
-				M+=graph[i][j];
-			}
-		}
-	}
-	//M=20;
-	M/=2;
-	for(i=1;i<=N;i++){
-		if(degree[i]%2!=0){
-			printf("-1");
-			return 0;
-		}
-	}
-	if(dfs(1)!=M){
+	if (flag||ans.size() != tot+1) 
 		printf("-1");
-		return 0;
-	}
-	//dfs(1);
-	for(i=0;i<ans.size();i++){
-		printf("%d ",ans[i]);
-	}
-	//visit, dfs or bfs
+	else 
+		for (auto v : ans) printf("%d ", v);
+	
 
 	return 0;
-
 }
