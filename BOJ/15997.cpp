@@ -1,4 +1,4 @@
-//implementation
+//implementation, math
 
 #include <iostream>
 #include <string>
