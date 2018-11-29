@@ -7,7 +7,7 @@
 using namespace std;
 const int mod1 = 1e9 + 7;
 const int mod2 = 1e9 + 9;
-const string content = "content=";
+const string content = "<meta property=\"og:url\" content=";
 ll h1[20], h2[20];
 int base[20];
 double mp[20];
@@ -33,12 +33,12 @@ int solution(string word, vector<string> pages) {
 			while (lix < content.size() && pages[i][ls + lix] == content[lix]) ++lix;
 
 			if (lix == content.size()) {
-				ls += 15;
+				ls += lix+7;
 				ll &ref1 = h1[i];
 				ll &ref2 = h2[i];
 				while (pages[i][ls] != '\"') {
-					ref1 *=256; ref1 %= mod1;
-					ref2 *=256; ref2 %= mod2;
+					ref1 <<= 8; ref1 %= mod1;
+					ref2 <<= 8; ref2 %= mod2;
 					ref1 = (ref1 + pages[i][ls]) % mod1;
 					ref2 = (ref2 + pages[i][ls]) % mod2;
 					++ls;
@@ -49,7 +49,7 @@ int solution(string word, vector<string> pages) {
 	}
 	for (int i = 0; i < pages.size(); ++i) {
 		int s = pages[i].find("<body>") + 6;
-		int e = pages[i].find("</body>");
+		int e = pages[i].find("</body>")+1;
 		while (s < e) {
 			if (pages[i][s - 1] == '<' && pages[i][s] == 'a') {
 
@@ -57,8 +57,8 @@ int solution(string word, vector<string> pages) {
 				ll hash1 = 0;
 				ll hash2 = 0;
 				while (pages[i][ls] != '\"') {
-					hash1 *=256; hash1 %= mod1;
-					hash2 *=256; hash2 %= mod2;
+					hash1 <<= 8; hash1 %= mod1;
+					hash2 <<= 8; hash2 %= mod2;
 					hash1 = (hash1 + pages[i][ls]) % mod1;
 					hash2 = (hash2 + pages[i][ls]) % mod2;
 					++ls;
@@ -66,6 +66,9 @@ int solution(string word, vector<string> pages) {
 				link[i].push_back(bfsearch(hash1, hash2));
 				s = ls + 2;
 				while (pages[i][s] != 'a' || pages[i][s + 1] != '>')++s;
+			}
+			else if (pages[i][s - 1] == '<') {
+				while (pages[i][s] != '>')++s;
 			}
 			else {
 				int wix = 0;
