@@ -43,29 +43,15 @@ vector<string> solution(vector<string> record) {
 	for (auto s : record) {
 		if (s[0] == 'E') {
 			pll h = get_id(s);
-			string ans = mp[h]+"´ÔÀÌ µé¾î¿Ô½À´Ï´Ù.";
+			string ans = mp[h]+"ë‹˜ì´ ë“¤ì–´ì™”ìŠµë‹ˆë‹¤.";
 			answer.push_back(ans);
 		}
 		else if (s[0] == 'L') {
 			pll h = get_id(s);
-			string ans = mp[h] + "´ÔÀÌ ³ª°¬½À´Ï´Ù.";
+			string ans = mp[h] + "ë‹˜ì´ ë‚˜ê°”ìŠµë‹ˆë‹¤.";
 			answer.push_back(ans);
 		}
 		
 	}
 	return answer;
-}
-#include <iostream>
-int main() {
-	vector<string> q;
-	q.push_back("Enter uid1234 Muzi");
-	q.push_back("Enter uid4567 Prodo");
-	q.push_back("Leave uid1234");
-	q.push_back("Enter uid1234 Prodo");
-	q.push_back("Change uid4567 Ryan");
-	vector<string> ans = solution(q);
-	for (auto s : ans) {
-		cout << s << endl;
-	}
-	return 0;
 }
