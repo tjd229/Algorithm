@@ -22,7 +22,7 @@ int main(){
 	for(i=0;i<N;i++){
 		for(j=0;j<M;j++){
 			if(d[e[j].u]!=MAXVAL&&d[e[j].v]>d[e[j].u]+e[j].c){
-				if(i==N-1) return printf("-1");
+				if(i==N-1) return !printf("-1");
 				d[e[j].v]=d[e[j].u]+e[j].c;
 			}
 		}
