@@ -1,44 +1,46 @@
 //category : graph
 
 #include <stdio.h>
-#include <queue>
+#include <vector>
+#define pii pair<int,int>
 using namespace std;
-int map[1000][1000];
-int M, N;
-bool tomato(int x,int y){
-	if (x < 0 || y < 0 || x >= M || y >= N) return false;
-	if (map[y][x] !=0) return false;
-	map[y][x] = 1;
-	return true;
-}
-int main(){
-	int num;
-	int cnt = 0;
-	int level=-1;
+int tomato[1000][1000];
+int N, M;
+int main() {
 	int i, j;
-	queue<pair<int, int> > q;
-	scanf("%d%d",&M,&N);
-	num = M*N;
-	for (i = 0; i < N; i++){
-		for (j = 0; j < M; j++){
-			scanf("%d", &map[i][j]);
-			if (map[i][j] == -1) num--;
-			if (map[i][j] == 1) q.push(make_pair(j+i*M,0)),cnt++;
+	int all = 0;
+	int day = 0;
+	vector<pii > q;
+	for (scanf("%d%d", &M, &N), i = 0; i < N; ++i) {
+		for (j = 0; j < M; ++j) {
+			scanf("%d", tomato[i]+j);
+			if (tomato[i][j] == 1) 
+				q.push_back({i*M+j,0});
+			all += tomato[i][j] != -1;
 		}
 	}
-	if (cnt == num) return printf("0");
-	while (!q.empty()){
-		i = q.front().first / M;
-		j = q.front().first % M;
-		level = q.front().second;
-		if (tomato(j, i + 1)) q.push(make_pair(q.front().first + M, level + 1)),cnt++;
-		if (tomato(j, i - 1)) q.push(make_pair(q.front().first - M, level + 1)),cnt++;
-		if (tomato(j+1, i)) q.push(make_pair(q.front().first + 1, level + 1)),cnt++;
-		if (tomato(j-1, i)) q.push(make_pair(q.front().first - 1, level + 1)),cnt++;
-		if (cnt == num) break;
-		q.pop();
+	for (int k = 0; k < q.size();++k) {
+		pii p = q[k];
+		i = p.first / M;
+		j = p.first%M;
+		day = p.second;
+		if (i > 0 && tomato[i - 1][j] == 0) {
+			q.push_back({ p.first - M,1 + day });
+			tomato[i - 1][j] = 1;
+		}
+		if (j > 0 && tomato[i][j - 1] == 0) {
+			q.push_back({ p.first - 1,1 + day });
+			tomato[i][j - 1] = 1;
+		}
+		if (i <N-1 && tomato[i + 1][j] == 0) {
+			q.push_back({ p.first + M,1 + day });
+			tomato[i + 1][j] = 1;
+		}
+		if (j <M-1 && tomato[i][j + 1] == 0) {
+			q.push_back({ p.first + 1,1 + day });
+			tomato[i][j + 1] = 1;
+		}
 	}
-	printf("%d",cnt==num? level+1:-1);
-
+	printf("%d",all==q.size()? day:-1);
 	return 0;
 }
