@@ -1,5 +1,4 @@
 //greedy
-
 #include <stdio.h>
 #include <queue>
 #include <vector>
