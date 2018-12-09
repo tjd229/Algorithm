@@ -18,9 +18,9 @@ int move(int x,int p,int m){
 int main(){
 	
 	scanf("%d%d%d%d%d",&F,&S,&G,&U,&D);
-	if (S == G) return printf("0");
-	if (S<G&&U<1) return printf("use the stairs");
-	if (S>G&&D<1) return printf("use the stairs");
+	if (S == G) return !printf("0");
+	if (S<G&&U<1) return !printf("use the stairs");
+	if (S>G&&D<1) return !printf("use the stairs");
 	int ans;
 	if (G - S > 0) ans = move(G - S, U, D);
 	if (G - S < 0) ans = move(S-G, D, U);
