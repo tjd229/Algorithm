@@ -19,7 +19,7 @@ ll destroy(ll l, ll r) {
 }
 int main() {
 	int i;
-	for (scanf("%d%d%d%d", &n, &k, &A, &B), i = 0; i < k; ++i) scanf("%I64d", a + i);
+	for (scanf("%d%d%d%d", &n, &k, &A, &B), i = 0; i < k; ++i) scanf("%I64d", a + i); 
 	
 	sort(a, a + k);
 	a[i] = a[i - 1] + 1;
