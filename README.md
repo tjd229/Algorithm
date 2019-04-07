@@ -31,6 +31,7 @@
 * d&c : divide and conquer  
 * floyd : Floyd-Warshall algorithm  
 * ft : fenwick tree  
+* FFT : Fast Fourier Transform  
 * game : combination game algorithm  
 * geometry  
 * graph : graph, tree  
