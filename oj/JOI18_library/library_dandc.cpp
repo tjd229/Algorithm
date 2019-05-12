@@ -1,4 +1,4 @@
-//category : d&c
+//category : bs
 
 #include <cstdio>
 #include <vector>
