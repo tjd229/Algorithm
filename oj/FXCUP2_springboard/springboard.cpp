@@ -1,4 +1,4 @@
-//bs
+//implementation
 #include "springboard.h"
 #include <stdio.h>
 void Reorder(int N) {
