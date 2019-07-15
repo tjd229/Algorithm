@@ -1,4 +1,4 @@
-//graph, floyd, tp_sort
+//graph, floyd, tp sort
 #include <stdio.h>
 #include <vector>
 #include <queue>
