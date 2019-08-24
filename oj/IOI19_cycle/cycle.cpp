@@ -1,4 +1,4 @@
-//bs
+//bs, graph
 #include "cycle.h"
 void escape(int n) {
 	int half = n >> 1;
