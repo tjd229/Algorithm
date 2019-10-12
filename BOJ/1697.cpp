@@ -1,6 +1,4 @@
-//category : graph
-
-
+//graph
 
 #include <stdio.h>
 #include <vector>
@@ -22,7 +20,10 @@ bool move(int x){
 int main(){
 	int i=0;
 	scanf("%d%d",&N,&K);
-	if (N == K) return printf("0");
+	if (N == K){
+        printf("0");
+        return 0;
+    } 
 	vector<int> v;
 	v.push_back(N);
 	int end = 0;
