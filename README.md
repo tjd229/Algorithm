@@ -16,7 +16,7 @@
 >GCJ : [Code Jam](https://codingcompetitions.withgoogle.com/codejam)
 
 
-<!--
+
 # Category description  
   
 * 2-SAT : 2-Satisfiability  
@@ -64,7 +64,7 @@
 * tdp : tree dynammic programming  
 * tp sort : topology sort  
 * trie  
--->
+
   
     
       
