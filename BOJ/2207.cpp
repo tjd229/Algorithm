@@ -1,4 +1,4 @@
-//category : graph, SCC, 2-SAT
+//graph, SCC, 2-SAT
 
 #include <stdio.h>
 #include <vector>
@@ -44,10 +44,12 @@ int main(){
 	for (i = 1; i <= M; i++) dfs(i+MAXN, true, edge);
 	for (i = edge[0].size() - 1;i>=0; i--){
 		back[0].clear();
-		if (dfs(edge[0][i], false, back) && isContradic(back[0])) return printf("OTL");
+		if (dfs(edge[0][i], false, back) && isContradic(back[0])){
+            printf("OTL");
+            return 0;
+        }
 
 	}
 	printf("^_^");
 	return 0;
 }
-
