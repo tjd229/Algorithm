@@ -1,4 +1,4 @@
-//dp, strings
+//dp, string
 #include <stdio.h>
 #include <memory.h>
 char s[201], t[2];
