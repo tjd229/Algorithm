@@ -52,7 +52,7 @@ int solution(vector<vector<int>> t) {
 		int u = p[0], v = p[1];
 		edge[u].push_back(v);
 		edge[v].push_back(u);
-	}
+	} 
 	int rt = 0,mx=0;
 	int n = t.size() + 1;
 	dfs(0, -1);
