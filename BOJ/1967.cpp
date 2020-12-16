@@ -19,11 +19,11 @@ int main() {
 	int i, n;
 	int u, v, w;
 	for (scanf("%d", &n), i = 1; i < n; ++i) {
-		scanf("%d%d%d",&u,&v,&w);
+		scanf("%d%d%d", &u, &v, &w);
 		edge[u].push_back({ v,w });
 		edge[v].push_back({ u,w });
 	}
-	dfs(1,d1);
+	dfs(1, d1); d1[1] = 0;
 	w = 0;
 	for (i = 1; i <= n; ++i) {
 		if (w < d1[i]) {
@@ -31,10 +31,10 @@ int main() {
 			u = i;
 		}
 	}
-	dfs(u, d2);
+	dfs(u, d2); d2[u] = 0;
 	for (i = 1, w = 0; i <= n; ++i) {
 		if (w < d2[i]) w = d2[i];
 	}
-	printf("%d",w);
+	printf("%d", w);
 	return 0;
 }
