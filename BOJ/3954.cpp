@@ -16,7 +16,7 @@ void sim() {
 	vector<pii > s;
 	int mem[100000] = { 0 };
 	for (t = 0; t < sc; t++) {
-		if (inst[t] == '[') s.push_back({t,0});
+		if (inst[t] == '[') s.push_back({ t,0 });
 		else if (inst[t] == ']') {
 			nxt[s.back().first] = t;
 			s.pop_back();
@@ -46,15 +46,15 @@ void sim() {
 		}
 		else if (inst[t] == '[') {
 			if (mem[pt])
-				s.push_back({t,cnt});
+				s.push_back({ t,cnt });
 			else {
 				t = nxt[t];
-				cnt++;
+				//cnt++;
 			}
 		}
 		else if (inst[t] == ']') {
 			if (mem[pt]) {
-				cnt++;
+				//cnt++;
 				if (cnt - s.back().second >= 50000000) {
 					cout << "Loops " << s.back().first << " " << t << "\n";
 					return;
@@ -68,7 +68,7 @@ void sim() {
 		}
 
 		cnt++;
-		
+
 	}
 	cout << "Terminates\n";
 }
