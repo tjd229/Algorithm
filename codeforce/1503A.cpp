@@ -43,6 +43,5 @@ int main() {
 			printf("%s\n%s\n%s\n","YES",a,b);
 		}
 	}
- 
 	return 0;
 }
