@@ -63,6 +63,7 @@
 * string  
 * tdp : tree dynammic programming  
 * tp sort : topology sort  
+* ts : ternary search  
 * trie  
 
   
