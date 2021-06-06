@@ -5,7 +5,7 @@
 #include <algorithm>
 #define ll long long
 using namespace std;
-char i2c[4] = {'A','N','O','T'};
+char i2c[4] = {'A','N','O','T'}; 
 ll transform(vector<int> &perm,vector<int> &dna) {
 	ll c = 0;
 	int cnt[4] = { 0 };
