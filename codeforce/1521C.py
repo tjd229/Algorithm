@@ -1,3 +1,4 @@
+#math
 import sys
 def ask(*args):
     print('? %d %d %d %d'%(args))
