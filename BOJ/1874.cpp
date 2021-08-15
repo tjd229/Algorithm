@@ -1,4 +1,4 @@
-//category : implementation
+//implementation
 
 #include <stdio.h>
 #include <stack>
@@ -29,8 +29,10 @@ int main(){
 			break;
 		}
 	}
-	if (v.empty()) return printf("NO");
-	for (i = 0; i < v.size(); i++)
+	if (v.empty())printf("NO");
+	else{	
+		for (i = 0; i < v.size(); i++)
 		printf("%c\n",v[i]);
+	    }
 	return 0;
 }
