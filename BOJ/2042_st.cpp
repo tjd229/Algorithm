@@ -21,7 +21,7 @@ int main() {
 	long long a, b, c;
 	scanf("%d%d%d", &N, &M, &K);
 	M += K;
-	for (i = 1; i <= N; i++) scanf("%d", &K), update(LEAF + i, K);
+	for (i = 1; i <= N; i++) scanf("%lld", &c), update(LEAF + i, c);
 	while(M--) {
 		scanf("%lld%lld%lld", &a, &b, &c);
 		if (a == 1) update(LEAF + b, c);
