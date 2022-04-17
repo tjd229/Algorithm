@@ -16,7 +16,7 @@
 >GCJ : [Code Jam](https://codingcompetitions.withgoogle.com/codejam)
 
 
-
+<!--
 # Category description  
   
 * 2-SAT : 2-Satisfiability  
@@ -65,7 +65,7 @@
 * tp sort : topology sort  
 * ts : ternary search  
 * trie  
-
+-->
   
     
       
